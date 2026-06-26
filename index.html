@@ -420,16 +420,16 @@
   /* ===== PRESET / MODE CARDS GRID ===== */
   .modes-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
     margin: 8px 0 18px;
   }
-  @media (max-width: 720px) { .modes-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .modes-grid { grid-template-columns: 1fr; } }
   .mode-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 14px;
-    padding: 20px 22px;
+    padding: 15px 16px;
     transition: all 0.3s ease;
   }
   .mode-card:hover {
@@ -438,21 +438,21 @@
     box-shadow: 0 8px 30px rgba(255,157,47,0.06);
   }
   .mode-icon {
-    width: 44px; height: 44px;
-    border-radius: 10px;
+    width: 32px; height: 32px;
+    border-radius: 9px;
     background: rgba(255,157,47,0.08);
     border: 1px solid rgba(255,157,47,0.25);
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 18px;
+    font-size: 14px;
     color: var(--sun-light);
-    margin-bottom: 14px;
+    margin-bottom: 9px;
     overflow: hidden;
   }
   .mode-icon .orb {
-    width: 20px; height: 20px;
+    width: 15px; height: 15px;
     border-radius: 50%;
     background: radial-gradient(circle at 38% 35%, #fff 0%, var(--c) 52%, transparent 76%);
     box-shadow: 0 0 12px var(--c);
@@ -567,7 +567,7 @@
   }
   figure.shot.portrait .shot-empty { aspect-ratio: 3 / 4; max-height: 560px; }
   figure.shot.tall .shot-empty { aspect-ratio: 9 / 16; max-height: 660px; }
-  figure.shot.ui { max-width: 460px; }
+  figure.shot.ui { max-width: 380px; }
   figure.shot.panel { max-width: 600px; }
   figure.shot .shot-empty .cam { font-size: 22px; opacity: 0.5; }
   figure.shot .shot-empty .key {
